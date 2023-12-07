@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""
-writes a string to a text file (UTF8)
-and returns the number of characters written
-"""
+"""write to a file"""
 
 
 def write_file(filename="", text=""):
+    """write to a file
+    Params:
+      filename: the name of the file to write to
+      text: the message to write to the file
+    Return: Number of characters written to a file
     """
-    writes a string to a text file (UTF8)
-    and returns the number of characters written
-    """
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write(text)
-    return len(text)
+    with open(filename, 'w', encoding="UTF8") as f:
+        return f.write(text)
