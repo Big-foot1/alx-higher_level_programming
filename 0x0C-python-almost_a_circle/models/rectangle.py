@@ -116,3 +116,11 @@ class Rectangle(Base):
             Define The Area of Rectangle
         """
         return self.__width * self.__height
+
+    def display(self):
+        """
+            Display The Rectangle Using  '#'
+        """
+        print(("\n" * self.__y) +
+              "\n".join(((" " * self.__x) + ("#" * self.__width))
+                        for i in range(self.__height)))
