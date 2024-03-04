@@ -13,7 +13,7 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     info = (username, password)
-    request = requests.get(url, info)
+    request = requests.get(url, auth=info)
     try:
         print(request.json()['id'])
     except Exception:
