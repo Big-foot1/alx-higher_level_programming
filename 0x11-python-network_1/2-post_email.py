@@ -10,8 +10,8 @@ if __name__ == '__main__':
     email = sys.argv[2]
     value = {"email": email}
     data = urllib.parse.urlencode(value)
-    data = data.encode("ascii")
+    data = data.encode("uft-8")
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
         info = response.read()
-    print(info.decode("ascii"))
+    print(info.decode("uft-8"))
